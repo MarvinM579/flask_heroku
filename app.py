@@ -2,7 +2,7 @@
 Flask Documentation:     http://flask.pocoo.org/docs/
 Jinja2 Documentation:    http://jinja.pocoo.org/2/documentation/
 Werkzeug Documentation:  http://werkzeug.pocoo.org/documentation/
-
+..
 This file creates your application.
 """
 
@@ -19,22 +19,23 @@ app = Flask(__name__)
 
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'this_should_be_configured')
 
-DBUSER=os.environ.get('DBUSER', True)
-DBPASS=os.environ.get('DBPASS', True)
-DBHOST=os.environ.get('DBHOST', True)
-DBNAME=os.environ.get('DBNAME', True)
+DBUSER = os.environ.get('DBUSER', True)
+DBPASS = os.environ.get('DBPASS', True)
+DBHOST = os.environ.get('DBHOST', True)
+DBNAME = os.environ.get('DBNAME', True)
 
 ###
 # Routing for your application.
 ###
 
+
 @app.route('/')
 def home():
     """Render website's home page."""
-    db=pg.DB(host=DBHOST, user=DBUSER, passwd=DBPASS, dbname=DBNAME)
-    query=db.query("select * from album")
+    db = pg.DB(host=DBHOST, user=DBUSER, passwd=DBPASS, dbname=DBNAME)
+    query = db.query("select * from album")
     result_list = query.namedresult()
-    return render_template('home.html',result_list=result_list)
+    return render_template('home.html', result_list=result_list)
 
 
 @app.route('/about/')
