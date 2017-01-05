@@ -51,7 +51,7 @@ def submit_login():
         user = result_list[0]
         if user.password == password:
             session['name'] = user.name
-            return redirect('/contacts')
+            return redirect('/')
         else:
             return redirect('/login')
     else:
