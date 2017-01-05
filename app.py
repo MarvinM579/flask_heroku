@@ -24,6 +24,8 @@ DBPASS = os.environ.get('DBPASS', True)
 DBHOST = os.environ.get('DBHOST', True)
 DBNAME = os.environ.get('DBNAME', True)
 
+db = pg.DB(host=DBHOST, user=DBUSER, passwd=DBPASS, dbname=DBNAME)
+
 ###
 # Routing for your application.
 ###
