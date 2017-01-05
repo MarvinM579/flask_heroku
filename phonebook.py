@@ -70,7 +70,6 @@ def logout():
 
 @app.route('/contacts')
 def contacts():
-    db = pg.DB(host=DBHOST, user=DBUSER, passwd=DBPASS, dbname=DBNAME)
     contacts = db.query('select * from phonebook').namedresult()
     return render_template(
         'contacts.html',
