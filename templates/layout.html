@@ -28,9 +28,9 @@
 
                 {% if session['name'] %}
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/contacts">All Contacts</a></li>
-                    <li><a href="/new_contact">Add Contact</a></li>
-                    <li><a href="/logout">Logout</a></li>
+                    <li><a href="contacts">All Contacts</a></li>
+                    <li><a href="new_contact">Add Contact</a></li>
+                    <li><a href="logout">Logout</a></li>
                 </ul>
                 {% elif request.path=="/login" %} {% else %}
                 <ul class="nav navbar-nav navbar-right">
