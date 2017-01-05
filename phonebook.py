@@ -131,7 +131,7 @@ def submit_update():
     else:
         raise Exception("ERROR")
     return redirect('/contacts')
-app.secret_key = 'cn0hn42'
+# app.secret_key = 'cn0hn42'
 
 
 ###
