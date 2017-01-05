@@ -8,7 +8,7 @@ This file creates your application.
 
 import os
 import pg
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, session
 
 import sys
 
