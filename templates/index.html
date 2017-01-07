@@ -8,6 +8,10 @@
     {% if not session['name'] %}
     <a href="login"><button class="btn btn-primary btn-md">Log In</button></a>
 
+    {% elif session['name']==Jessica %}
+    <h1>You're literally the worst person.</h1>
+    <p>I hate you and everything you stand for.</p>
+
     {% endif %}
 
 </div>
