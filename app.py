@@ -53,7 +53,7 @@ def submit_login():
             session['name'] = user.name
             return redirect('/')
             if session['name'] == 'Jessica'
-                return redirect('jessica.html')
+                return redirect('/jessica')
         else:
             return redirect('/login')
     else:
