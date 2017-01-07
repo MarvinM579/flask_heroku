@@ -52,8 +52,8 @@ def submit_login():
         if user.password == password:
             session['name'] = user.name
             return redirect('/')
-            if session['name'] == 'Jessica'
-                return redirect('/jessica')
+            # if session['name'] == 'Jessica'
+            #     return redirect('/jessica')
         else:
             return redirect('/login')
     else:
