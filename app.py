@@ -52,6 +52,8 @@ def submit_login():
         if user.password == password:
             session['name'] = user.name
             return redirect('/')
+            if session['name'] == 'Jessica'
+                return redirect('jessica.html')
         else:
             return redirect('/login')
     else:
@@ -132,9 +134,10 @@ def submit_update():
         raise Exception("ERROR")
     return redirect('/contacts')
 
-# @app.route("/Jessica")
-# def Jessica():
-#     return render_template("jessica.html")
+
+@app.route("/Jessica")
+def Jessica():
+    return render_template("jessica.html")
 
 
 ###
